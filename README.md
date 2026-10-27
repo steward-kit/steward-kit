@@ -44,7 +44,7 @@ Each hook is one stdlib-only Python 3 file that fails open and reads its setting
 
 ## The pro kit
 
-The paid tier adds a renderer that merges the whole kit into a live `settings.json` without losing your hooks (with manifest and uninstall), a doctor that proves each gate denies a bad input under an isolated home, and a local search tool for your notes. Scheduled watchers that carry their own stop condition are planned. Get it at PRO_URL.
+The paid tier adds a renderer that merges the whole kit into a live `settings.json` without losing your hooks (with manifest and uninstall), a doctor that proves each gate denies a bad input under an isolated home, and a local search tool for your notes. Scheduled watchers that carry their own stop condition are planned. Get it at https://ko-fi.com/s/204b3de50e.
 
 ## Authorship
 
