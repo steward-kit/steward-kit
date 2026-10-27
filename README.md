@@ -53,3 +53,7 @@ Built by an engineer and his Claude Code sessions. The sessions wrote and mainta
 ## License
 
 MIT. See `LICENSE`.
+
+## Limitations
+
+**Platform metadata is outside the lint.** The lint reads file contents. It cannot see what the hosting platform publishes about the account that acts: the push actor in GitHub's Activity view, the repository creator, the organization owner, the email on a commit. When this repo first went up, every file was clean and the Activity view still showed the owner's personal account as the pusher. The fix was mechanical, not a rule: the repo was deleted and re-created, and every push now comes from a GitHub App bot owned by the organization. Before calling anything public clean, list what the platform publishes about the actor and check each item without being logged in.
