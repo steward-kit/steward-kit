@@ -1,0 +1,1 @@
+# Identifiers that must never appear anywhere in core/ (employer names, hostnames, people). One per line, matched case-insensitively. Blank lines and lines starting with # are ignored.

@@ -1,0 +1,51 @@
+# Lab profile. Obviously fake values that exercise the kit. Not a real context.
+
+[context]
+# Short id of this context. Must equal the directory name under profiles/.
+name = "lab"
+# What kind of context this is: home, employer or lab.
+kind = "lab"
+# Date the context started, as YYYY-MM-DD.
+start_date = "2000-01-01"
+
+[employer]
+# Chat tool the employer uses for work messages, or "none".
+chat_tool = "none"
+# Operating system of the work laptop: linux, windows or mac. Blank if there is none.
+laptop_os = "linux"
+# URL of the employer's written AI-use policy. Blank until someone has read it.
+ai_policy_url = "https://example.invalid/ai-policy"
+
+[ai]
+# AI providers this context allows, from: claude, codex, gemini, cursor, copilot.
+allowed_providers = ["claude", "codex"]
+# Account type on those providers: consumer, commercial or unknown.
+account_type = "unknown"
+# Provider-side memory features. Stays "off" until the policy says otherwise.
+memory_features = "off"
+
+[people]
+# People who must never be messaged from this context. Use opaque ids that resolve in the local knowledge base, not display names.
+never_message = []
+# Set to true only after a human has reviewed never_message and confirmed the list is complete.
+never_message_confirmed = true
+# Groups of people who need extra care when messaged. Same rule: ids, not names.
+protected_groups = []
+# Set to true only after a human has reviewed protected_groups and confirmed the list is complete.
+protected_groups_confirmed = true
+
+[paths]
+# Root directory of this context's knowledge base.
+kb_root = "~/kit-lab-kb"
+# Directory of the principal's own writing samples, used by the voice gate.
+exemplars_dir = "~/kit-lab-kb/exemplars"
+
+[sends]
+# When a human must approve an outbound message. "every" means each message, before it is sent.
+approval = "every"
+
+[claude]
+# The lab pins what the acceptance runs use, so a result names a model and an effort rather than an account default.
+model = "claude-opus-5-5"
+effortLevel = "high"
+ultracode = true

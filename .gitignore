@@ -1,0 +1,26 @@
+# kit
+__pycache__/
+*.pyc
+.venv/
+out/
+
+# vc adopt template
+*.log
+logs/
+runs/
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+id_*
+*credentials*
+*.sqlite
+*.sqlite3
+*.db

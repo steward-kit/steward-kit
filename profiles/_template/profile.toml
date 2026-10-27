@@ -1,0 +1,55 @@
+# Profile template. Copy this directory to profiles/<name>/ and fill it in.
+# A blank value means "not decided yet". Render refuses a profile whose confirmed
+# flags are false, because an unreviewed empty list means unknown, not none.
+
+[context]
+# Short id of this context. Must equal the directory name under profiles/.
+name = ""
+# What kind of context this is: home, employer or lab.
+kind = ""
+# Date the context started, as YYYY-MM-DD.
+start_date = ""
+
+[employer]
+# Chat tool the employer uses for work messages, or "none".
+chat_tool = ""
+# Operating system of the work laptop: linux, windows or mac. Blank if there is none.
+laptop_os = ""
+# URL of the employer's written AI-use policy. Blank until someone has read it.
+ai_policy_url = ""
+
+[ai]
+# AI providers this context allows, from: claude, codex, gemini, cursor, copilot.
+allowed_providers = []
+# Account type on those providers: consumer, commercial or unknown.
+account_type = ""
+# Provider-side memory features. Stays "off" until the policy says otherwise.
+memory_features = "off"
+
+[people]
+# People who must never be messaged from this context. Use opaque ids that resolve in the local knowledge base, not display names.
+never_message = []
+# Set to true only after a human has reviewed never_message and confirmed the list is complete.
+never_message_confirmed = false
+# Groups of people who need extra care when messaged. Same rule: ids, not names.
+protected_groups = []
+# Set to true only after a human has reviewed protected_groups and confirmed the list is complete.
+protected_groups_confirmed = false
+
+[paths]
+# Root directory of this context's knowledge base.
+kb_root = ""
+# Directory of the principal's own writing samples, used by the voice gate.
+exemplars_dir = ""
+
+[sends]
+# When a human must approve an outbound message. "every" means each message, before it is sent.
+# "standing" means each message unless a dated standing permission below covers it.
+approval = "every"
+# One block per standing permission, only with approval = "standing" (which needs at least one;
+# "every" needs none). All four values are one-line strings and since is a real YYYY-MM-DD date.
+# [[sends.standing]]
+# name = "short label"
+# since = "2026-01-31"
+# scope = "one sentence: what is pre-approved"
+# not_covered = "one sentence: what stays outside it"

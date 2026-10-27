@@ -1,0 +1,34 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {"hooks": [
+        {"type": "command", "command": "python3 \"$HOME/.claude/hooks/warm-start.py\""},
+        {"type": "command", "command": "python3 \"$HOME/.claude/hooks/session-prompt-log.py\""}
+      ]}
+    ],
+    "UserPromptSubmit": [
+      {"hooks": [
+        {"type": "command", "command": "python3 \"$HOME/.claude/hooks/correction-catcher.py\""},
+        {"type": "command", "command": "python3 \"$HOME/.claude/hooks/active-threads.py\""}
+      ]}
+    ],
+    "PreToolUse": [
+      {"matcher": "Write|Edit|MultiEdit|Bash", "hooks": [{"type": "command", "command": "python3 \"$HOME/.claude/hooks/kb-size-gate.py\""}]},
+      {"matcher": "Agent|Workflow", "hooks": [{"type": "command", "command": "python3 \"$HOME/.claude/hooks/tier-guard.py\""}]},
+      {"matcher": "Bash", "hooks": [{"type": "command", "command": "python3 \"$HOME/.claude/hooks/tmux-socket-guard.py\""}]}
+    ],
+    "PostToolUse": [
+      {"matcher": "Write|Edit|NotebookEdit", "hooks": [{"type": "command", "command": "python3 \"$HOME/.claude/hooks/vc-guard.py\""}]}
+    ],
+    "PreCompact": [
+      {"hooks": [{"type": "command", "command": "python3 \"$HOME/.claude/hooks/pre-compact-instructions.py\""}]}
+    ],
+    "Stop": [
+      {"hooks": [
+        {"type": "command", "command": "python3 \"$HOME/.claude/hooks/unwritten-fact-nudge.py\""},
+        {"type": "command", "command": "python3 \"$HOME/.claude/hooks/dated-commit-nudge.py\""},
+        {"type": "command", "command": "python3 \"$HOME/.claude/hooks/tiering-score.py\""}
+      ]}
+    ]
+  }
+}

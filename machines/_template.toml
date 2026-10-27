@@ -1,0 +1,23 @@
+# Machine template. Copy to machines/<hostname>.toml and fill it in from the host itself.
+
+[machine]
+# Hostname as printed by `hostname`. Must equal the file name without .toml.
+hostname = ""
+# Operating system: linux, windows or mac.
+os = ""
+# CPU architecture as printed by `uname -m`, for example x86_64 or aarch64.
+arch = ""
+
+[paths]
+# Path of the Claude Code binary, or blank if it is not installed. A leading ~ is allowed.
+claude_bin = ""
+# Path of the Codex binary, or blank if it is not installed.
+codex_bin = ""
+# Python 3 interpreter the kit tools run under.
+python = ""
+# Home directory of the account the kit is installed for. A leading ~ is allowed.
+home = ""
+
+[limits]
+# Installed RAM in whole GiB as printed by `free -g` (it rounds down).
+ram_gb = 0
