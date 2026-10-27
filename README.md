@@ -3,6 +3,7 @@
 A working operating model for Claude Code, free part. It holds how a coding agent should behave: a rules file (the contract), a memory format, two agent definitions, and twelve hooks that enforce the rules mechanically instead of leaving them as prose. A lint checks that nothing private leaks into the shared layer.
 
 Tutorial: https://steward-kit.github.io/tutorial/
+Free analyzer (paste a CLAUDE.md, see which rules a hook can enforce; runs in your browser): https://steward-kit.github.io/analyzer/
 
 It started as one engineer's setup for running Claude Code across a homelab and a few side projects. Rules that were only prose kept being skipped under pressure, so each one that mattered turned into a hook or a check.
 
