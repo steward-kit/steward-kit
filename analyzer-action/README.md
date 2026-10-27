@@ -1,5 +1,7 @@
 # CLAUDE.md check
 
+Short install line from the standalone mirror: `uses: steward-kit/claude-md-check@v0.1.1` (https://github.com/steward-kit/claude-md-check)
+
 This action reads your CLAUDE.md, counts the rule-like lines, and shows which ones a steward-kit hook can enforce. The report lands in the job summary. By default it never fails a build.
 
 ```yaml

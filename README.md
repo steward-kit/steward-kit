@@ -4,7 +4,7 @@ A working operating model for Claude Code, free part. It holds how a coding agen
 
 Tutorial: https://steward-kit.github.io/tutorial/
 Free analyzer (paste a CLAUDE.md or a public repo address, see which rules a hook can enforce; runs in your browser): https://steward-kit.github.io/analyzer/ (permalink form: https://steward-kit.github.io/analyzer/?repo=owner/name)
-The same check as a GitHub Action, one workflow step: `analyzer-action/README.md`
+The same check as a GitHub Action, one workflow step: `analyzer-action/README.md`, or `uses: steward-kit/claude-md-check@v0.1.1` from its standalone repo
 A sample of the paid report, run on this kit's own contract: https://steward-kit.github.io/report-sample/
 The state of CLAUDE.md, October 2026 (492 public files, tables and the per-repo CSV): https://steward-kit.github.io/state-of-claude-md/
 
