@@ -44,6 +44,7 @@ Each hook is one stdlib-only Python 3 file that fails open and reads its setting
 - **Memory schema** (`core/memory/schema.md`): what a memory holds, shared versus private.
 - **Profiles and machines**: `profiles/_template` and a fake `profiles/lab`, plus `machines/_template.toml`.
 - **Lint** (`lint/lint.py`): fails if an identifier from a profile denylist appears under `core/`.
+- **CLAUDE.md check** (`analyzer-action/`): a GitHub Action that counts the rules in your CLAUDE.md and shows which ones a hook can enforce. Add it to a workflow with one step. See `analyzer-action/README.md`.
 
 ## The pro kit
 

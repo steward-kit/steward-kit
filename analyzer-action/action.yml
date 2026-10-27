@@ -1,0 +1,31 @@
+name: "CLAUDE.md check (steward-kit)"
+description: "Counts the rules in your CLAUDE.md and shows which ones a steward-kit hook can enforce."
+branding:
+  icon: shield
+  color: blue
+inputs:
+  path:
+    description: "Rules file to check, relative to the workspace."
+    default: "CLAUDE.md"
+  fail-under:
+    description: "Fail the job when enforceable_percent is below this number. Empty means never fail."
+    default: ""
+outputs:
+  rules:
+    description: "Number of rule-like lines."
+    value: ${{ steps.check.outputs.rules }}
+  matched:
+    description: "Number of rule lines the hook catalog matches."
+    value: ${{ steps.check.outputs.matched }}
+  enforceable_percent:
+    description: "matched divided by rules, as a percent with one decimal."
+    value: ${{ steps.check.outputs.enforceable_percent }}
+runs:
+  using: composite
+  steps:
+    - id: check
+      shell: bash
+      env:
+        INPUT_PATH: ${{ inputs.path }}
+        INPUT_FAIL_UNDER: ${{ inputs.fail-under }}
+      run: node "$GITHUB_ACTION_PATH/run.js"
