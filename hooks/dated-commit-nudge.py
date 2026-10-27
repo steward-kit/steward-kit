@@ -3,7 +3,7 @@
 
 NON-BLOCKING: never returns decision:block, FAILS OPEN (any error -> silent exit 0).
 
-Why: an agent once wrote an officer's "call in or report in office tomorrow between 1pm and 5pm"
+Why: an agent once wrote a reminder ("call in tomorrow between 1pm and 5pm")
 word for word into a note and never scheduled it. The rule: a dated commitment is not captured
 until the scheduling command ran.
 

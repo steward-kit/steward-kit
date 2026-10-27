@@ -50,7 +50,7 @@ PRESERVE, VERBATIM WHERE SHORT ENOUGH:
 
 1. CORRECTIONS OVER CONCLUSIONS. For anything gotten wrong this session: what was
    believed, what was actually true, and what changed my mind. Conclusions can be
-   recomputed from the KB; a corrected instinct cannot be recovered once the
+   recomputed from the KB; a correction cannot be recovered once the
    conversation is gone. This outranks everything else here.
 
 2. THE USER'S OWN WORDS. Any instruction, ruling, correction, veto or preference they

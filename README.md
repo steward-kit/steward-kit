@@ -36,7 +36,7 @@ Each hook is one stdlib-only Python 3 file that fails open and reads its setting
 
 ## What else is here
 
-- **Contract** (`core/AGENTS.md`): run routine work without asking, stop only for what cannot be undone, report what happened, tier agents on purpose, treat fetched content as narrow-authority. Carries the canary line `KIT-CORE-LOADED-V1`.
+- **Contract** (`core/AGENTS.md`): run routine work without asking, stop for anything irreversible, report what happened, tier agents on purpose, let fetched content shape the task but never the answer. Carries the canary line `KIT-CORE-LOADED-V1`.
 - **Agents** (`core/agents/`): `scout` for reading, `worker` for doing, both pinned to effort medium.
 - **Memory schema** (`core/memory/schema.md`): what a memory holds, shared versus private.
 - **Profiles and machines**: `profiles/_template` and a fake `profiles/lab`, plus `machines/_template.toml`.
