@@ -2,6 +2,8 @@
 
 ## 0.1.1 - 2026-10-26
 
+- Root `CLAUDE.md` that imports the contract and states the repo rules, so the analyzer and the action have a file to read here.
+- README links the repo-address form of the analyzer and the state of CLAUDE.md data page.
 - `analyzer-action/`: a composite GitHub Action that runs the CLAUDE.md analyzer in CI, writes the report to the job summary and never fails a build unless `fail-under` is set. `analyzer.js` is generated from the site's analyzer page; `node sync.js <page> --check` catches drift.
 
 ## 0.1.0 - 2026-10-26

@@ -3,9 +3,10 @@
 A working operating model for Claude Code, free part. It holds how a coding agent should behave: a rules file (the contract), a memory format, two agent definitions, and twelve hooks that enforce the rules mechanically instead of leaving them as prose. A lint checks that nothing private leaks into the shared layer.
 
 Tutorial: https://steward-kit.github.io/tutorial/
-Free analyzer (paste a CLAUDE.md, see which rules a hook can enforce; runs in your browser): https://steward-kit.github.io/analyzer/
+Free analyzer (paste a CLAUDE.md or a public repo address, see which rules a hook can enforce; runs in your browser): https://steward-kit.github.io/analyzer/ (permalink form: https://steward-kit.github.io/analyzer/?repo=owner/name)
 The same check as a GitHub Action, one workflow step: `analyzer-action/README.md`
 A sample of the paid report, run on this kit's own contract: https://steward-kit.github.io/report-sample/
+The state of CLAUDE.md, October 2026 (492 public files, tables and the per-repo CSV): https://steward-kit.github.io/state-of-claude-md/
 
 Day 1 numbers: we checked one repo from each of 702 GitHub organizations found by searching for coding-agent rules files. Of the 492 with a CLAUDE.md, the median file has 8 rules and 22% configure any hook at all. Two model-judged samples of 300 rule lines say about two thirds of the real rules could be enforced by a hook or a setting. Method and the rest of the numbers: https://steward-kit.github.io/log/
 
